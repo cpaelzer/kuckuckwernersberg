@@ -1,0 +1,14 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<article class="intro">
+  <h2>Alle Stationen</h2>
+  <p class="intro-outro">Das Erlebnis vor Ort ist viel besser, packt die Wanderschuhe aus!</p>
+  <nav class="station-overview">
+    <ul class="station-list">
+      {% for num in range(1, 19) %}
+      <li><a href="station/{{ '%02d' % num }}.html">Station {{ num }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</article>
+{% endblock %}

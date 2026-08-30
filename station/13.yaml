@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: CC-BY-SA-4.0
+title: 13. Richtung Osterbrunnen
+fuchs: 'Im Pfälzer Wald gibt es ein dichtes Netz an Rastmöglichkeiten für Wanderer. Allein der Pfälzerwald-Verein
+  unterhält über 100 Schutzhütten, die meisten davon frei zugänglich und mit Sitzgelegenheiten und oft
+  auch einer Feuerstelle ausgestattet.
+
+
+  Daneben gibt es bewirtschaftete Hütten, die an Wochenenden und Feiertagen geöffnet sind und regionale
+  Spezialitäten wie Saumagen, Bratwurst oder Pfälzer Weine anbieten. Besonders beliebt sind die Hütten
+  des Pfälzerwald-Vereins wie die Landauer Hütte oder die Trifels-Hütte.
+
+
+  Einfache Bänke entlang der Wege laden immer wieder zum kurzen Verweilen ein und wurden oft von ortsansässigen
+  Vereinen oder Privatpersonen gestiftet. Schau dich mal um, ob du auf den Bänken Widmungen oder kleine
+  Tafeln entdecken kannst!'
+eichhoernchen: Von hier aus führt der Pfad weiter auf einen breiten Weg, versuche ihn in möglichst wenig
+  Schritten zu erreichen.
+kuckuck:
+  hint: “... entlang des Pfades zum Osterbrunnen”
+  placement: nahe am Pfad

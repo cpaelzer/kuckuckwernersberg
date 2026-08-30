@@ -1,0 +1,38 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<article class="intro">
+
+  <section class="intro-story">
+    <h2>{{ title }}</h2>
+    <div class="intro-text">{{ story_html|safe }}</div>
+  </section>
+
+  <section class="intro-howto">
+    <h3>So funktioniert's</h3>
+    <div class="intro-text">{{ howto_html|safe }}</div>
+  </section>
+
+  <section class="intro-animals">
+    <h3>Deine Begleiter</h3>
+    <div class="animal-cards">
+      <div class="animal-card">
+        <img src="{{ base_path }}assets/img/Fuchs_small.png" alt="Fuchs">
+        <strong>Fuchs</strong>
+        <span>Schon gewusst? – Wissen &amp; Geschichten</span>
+      </div>
+      <div class="animal-card">
+        <img src="{{ base_path }}assets/img/Eichhoernchen_small.png" alt="Eichhörnchen">
+        <strong>Eichhörnchen</strong>
+        <span>Schon bewegt? – Spiele &amp; Bewegung</span>
+      </div>
+      <div class="animal-card">
+        <img src="{{ base_path }}assets/img/Kuckuck_small.png" alt="Kuckuck">
+        <strong>Kuckuck</strong>
+        <span>Schon gehört? – Vögel finden &amp; erkennen</span>
+      </div>
+    </div>
+  </section>
+
+  <p class="intro-outro">{{ outro }}</p>
+</article>
+{% endblock %}

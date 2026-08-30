@@ -53,6 +53,12 @@ Wir bieten auf jeder Seite drei Vögelsilhouetten zum auswählen an, man erhält
   * Bewegungsspiel: maximal eine durchschnittliche Smartphone Seite
   * Suchspiel: der Hinweis wo man suchen sollte und die drei Optionen sollten auf einem durchschnittlichen Smartphone auf einmal angezeigt werden können
 
+## Build Voraussetzungen (Ubuntu 24.04+)
+
+Benötigte Systempakete:
+
+    sudo apt install -y make python3-jinja2 python3-markdown python3-yaml
+
 ## Struktur
 
 * README.md - diese Datei

@@ -1,0 +1,21 @@
+# SPDX-License-Identifier: CC-BY-SA-4.0
+title: 15. Das Wappen
+fuchs: 'Das Wernersberger Wappen zeigt einen goldenen Kuckuck auf grünem Dreiberg, dahinter eine rote
+  Burg mit zwei Zinnentürmen. Die Burg im Wappen erinnert an die einstige Burg der Herren von Wernhersberc,
+  die dem Ort seinen Namen gab. Erstmals urkundlich erwähnt wurde Wernersberg im Jahr 1276.
+
+
+  Der Kuckuck im Wappen verweist auf den „Uznamen" der Wernersberger Bürger: Die Einwohner werden traditionell
+  „Kuckucke" genannt, was sich vermutlich von der Kirchweih ableitet, die am zweiten Maisonntag – wenn
+  der Kuckuck ruft – gefeiert wird.
+
+
+  Der grüne Dreiberg symbolisiert die Lage des Ortes am Rothenberg im Pfälzer Wald. Die Farben Rot und
+  Gold sind die traditionellen Farben der Pfalz und unterstreichen die regionale Verbundenheit.'
+eichhoernchen: Spielt Verstecken! Hier im Schatten der großen Bäumen geht das besonders gut. Die Distanzen
+  sind hier größer - zählt bis dreißig, während sich die anderen verstecken. Wer wird wohl als Erstes
+  gefunden? Diese Übung macht nicht nur Spaß, sondern trainiert auch eure Beobachtungsgabe und Schnelligkeit.
+  Viel Spaß beim Spielen!
+kuckuck:
+  hint: “... Abwärts”
+  placement: entlang des Weges
