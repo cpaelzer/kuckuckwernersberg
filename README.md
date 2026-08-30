@@ -59,6 +59,11 @@ Benötigte Systempakete:
 
     sudo apt install -y make python3-jinja2 python3-markdown python3-yaml
 
+Zum Entwickeln mit Auto-Reload:
+
+    sudo apt install -y inotify-tools
+    make run
+
 ## Struktur
 
 * README.md - diese Datei
