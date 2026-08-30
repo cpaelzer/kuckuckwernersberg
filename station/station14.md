@@ -1,0 +1,15 @@
+# 14. Osterbrunnen
+
+## Fuchs: “Schon gewusst?”
+
+An Berghängen erfolgt die Wasserfassung in der Regel durch das Sperren des Wasserflusses einer wasserführenden Schicht, ohne dass eine Bohrung notwendig ist. Dabei wird die natürliche Strömung des Wassers umgeleitet, indem man gezielt Barrieren oder Dämme errichtet, die das Wasser in Richtung eines Brunnens leiten. Diese Barrieren können aus verschiedenen Materialien bestehen und sind so gestaltet, dass sie den Wasserfluss effektiv kontrollieren. Durch diese Methode wird das Wasser gesammelt und in den Brunnen geleitet, wo es dann entnommen werden kann. Diese Technik nutzt die geologischen Gegebenheiten optimal aus und ermöglicht eine nachhaltige Wasserversorgung aus den vorhandenen aquiferen Schichten.
+Doch welche Geschichte ist der Grund, dass wir hier am Osterbrunnen in Wernersberg einen Storch vorfinden? Man sieht am Brunnen ja den Spruch im Relief: “Es ist eine alte Mär, von hier kommen die kleinen Kinder her”. Der Volksmund hat diverse Gerüchte hierzu. Manche sagen, junge verliebte Paare haben gerne einen Ausflug am Berg entlang unternommen. Andere sagen, der Storch holt die Neugeborenen hier am Brunnen, um sie den Eltern ins Kinderbett zu legen.
+
+## Eichhörnchen: “Schon bewegt?”
+
+Damit unsere Quelle immer gut gefüllt bleibt, brauchen wir Dich! Erfinde und übe deinen persönlichen Regentanz! Stell dir vor, du kannst mit deinem Tanz die Quelle füllen. Bewege dich zur imaginären Musik des Regens, klatsche in die Hände und springe umher. Vielleicht hast du ja magische Kräfte und kannst damit wirklich das Wasser herbeizaubern! Viel Spaß beim Tanzen und Bewegen!
+
+## Kuckuck: "Schon gehört oder gar gefunden?”
+
+Hinweis: “... in der Hütte”
+Platzierung: in der Schutzhütte

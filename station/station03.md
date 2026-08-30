@@ -1,0 +1,15 @@
+# 3. Des sin Butzle!
+
+## Fuchs: “Schon gewusst?”
+
+So wie gesagt wird, dass die Bevölkerung in Polarregionen viele Wörter für Eis hat, muss man zugeben, dass der Pfälzer den Wald stärker unterscheidet. Hier im Wald stehen viele Kiefern, und später auch manchmal Tannen. Im Hochdeutschen sind all dies “Zapfen” nur unterschieden mittels dem Baum als Prefix “Tannen-zapfen”, “Kiefern-Zapfen”, ...
+Im Örtlichen Dialekt sind dies aber zwei Worte, “Tannen-Zapfen” sind “Zapple” wobei man die Herkunft noch erkennt. Jedoch sind “Kiefern-Zapfen” ganz klar “Buzzle” und damit etwas völlig anderes.
+
+## Eichhörnchen: “Schon bewegt?”
+
+Du wirst nun eine Weile bergauf laufen. Versuche doch einmal, rückwärts zu gehen! Ist das einfacher? Überlege mal, warum wir nicht immer rückwärts laufen. Vielleicht fällt dir auf, dass es deine Muskeln anders fordert und deine Balance verbessert. Probiere es aus und beobachte, wie sich dein Körper anfühlt!
+
+## Kuckuck: "Schon gehört oder gar gefunden?”
+
+Hinweis: “... in den Bäumen”
+Platzierung: Auf Baum in der Nähe

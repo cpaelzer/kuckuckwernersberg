@@ -1,0 +1,15 @@
+# 17. Wildschweine
+
+## Fuchs: “Schon gewusst?”
+
+Wildschweine ernähren sich von Pflanzenmaterial: Dazu gehören Wurzeln, Pilze, Früchte und Beeren. Besonders Eicheln und Bucheckern sind in den Herbstmonaten eine wichtige Nahrungsquelle. Wildschweine fressen aber auch Insekten, Würmer und andere Kleintiere, die sie im Boden finden.
+In der Nähe von landwirtschaftlichen Flächen können Wildschweine auch Mais, Kartoffeln und andere Feldfrüchte fressen. Wildschäden sind ein wichtiges Thema im Pfälzer Wald. Durch die Jagd wird versucht, die Populationen von Wildtieren zu regulieren, um Schäden an der Vegetation und landwirtschaftlichen Flächen zu minimieren. Die Jagd spielt eine entscheidende Rolle im Ökosystem, indem sie das Gleichgewicht zwischen Tierpopulationen und der Natur erhält. So bleibt unser Wald gesund und vielfältig!
+
+## Eichhörnchen: “Schon bewegt?”
+
+Hast Du beim Fuchs gelernt, was ein Wildschwein sucht? Stelle dir vor, du bist ein Wildschwein und suchst die besten Leckereien! Schnüffle am Boden oder ertaste die köstlichen Wurzeln, Pilze und Insekten. Die Grenze ist, was die Eltern erlauben - viel Spaß beim Suchen und Entdecken!  Aber Vorsicht im Herbst mit den stacheligen Kastanienhülsen.
+
+## Kuckuck: "Schon gehört oder gar gefunden?”
+
+Hinweis: “... TODO”
+Platzierung:
