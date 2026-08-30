@@ -1,0 +1,87 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<article class="station">
+  <h2 class="station-title">{{ title }}</h2>
+
+  <section class="station-section fuchs">
+    <img src="{{ base_path }}assets/img/Fuchs_small.png" alt="Fuchs" class="section-icon">
+    <h3>Schon gewusst?</h3>
+    <div class="section-content">{{ fuchs_content|safe }}</div>
+  </section>
+
+  <section class="station-section eichhoernchen">
+    <img src="{{ base_path }}assets/img/Eichhoernchen_small.png" alt="Eichhörnchen" class="section-icon">
+    <h3>Schon bewegt?</h3>
+    <div class="section-content">{{ eichhoernchen_content|safe }}</div>
+  </section>
+
+  {% if kuckuck_hint %}
+  <section class="station-section kuckuck">
+    <img src="{{ base_path }}assets/img/Kuckuck_small.png" alt="Kuckuck" class="section-icon">
+    <h3>Schon gehört oder gar gefunden?</h3>
+    <div class="section-content">
+      <p class="kuckuck-intro">{{ kuckuck_hint|safe }}</p>
+    </div>
+
+    <div class="bird-game">
+      {% for bird in birds %}
+      <button class="bird-option {% if bird.file.startswith(correct_prefix) %}correct{% endif %}">
+        <img src="{{ base_path }}assets/img/vogel/{{ bird.file }}" alt="{{ bird.name }}">
+        <span class="bird-name">{{ bird.name }}</span>
+      </button>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</article>
+
+<div class="modal-overlay" id="bird-modal">
+  <div class="modal-content">
+    <p id="modal-message"></p>
+    <button id="modal-close">OK</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  var WRONG_MSG = 'Das war leider der falsche Vogel, hast Du ihn wirklich gefunden?';
+  var CORRECT_MSG = 'Ja genau, doch leider ist das noch nicht Werner, lass uns weiter suchen.';
+
+  var modal = document.getElementById('bird-modal');
+  if (!modal) return;
+
+  var modalMsg = document.getElementById('modal-message');
+  var modalClose = document.getElementById('modal-close');
+  var modalContent = modal.querySelector('.modal-content');
+
+  modalClose.addEventListener('click', function () {
+    modal.classList.remove('visible');
+    modalContent.classList.remove('success', 'failure');
+  });
+
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      modal.classList.remove('visible');
+      modalContent.classList.remove('success', 'failure');
+    }
+  });
+
+  var options = document.querySelectorAll('.bird-option');
+  for (var i = 0; i < options.length; i++) {
+    options[i].addEventListener('click', function () {
+      var isCorrect = this.classList.contains('correct');
+      if (isCorrect) {
+        modalMsg.textContent = CORRECT_MSG;
+        modalContent.classList.remove('failure');
+        modalContent.classList.add('success');
+      } else {
+        modalMsg.textContent = WRONG_MSG;
+        modalContent.classList.remove('success');
+        modalContent.classList.add('failure');
+      }
+      modal.classList.add('visible');
+    });
+  }
+})();
+</script>
+{% endblock %}

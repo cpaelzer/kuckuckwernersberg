@@ -1,0 +1,11 @@
+<footer class="main-footer">
+  <div class="footer-content">
+    <a href="https://wernersberg.de/index.php?view=impressum" class="footer-link" target="_blank" rel="noopener noreferrer">Impressum</a>
+    <span class="footer-git">Commit: <code>{{ git_sha }}</code></span>
+    {% if station_id is defined %}
+    <a href="https://github.com/cpaelzer/kuckuckwernersberg/issues/new?title=Feedback%20Station%20{{ '%02d' % station_id }}" class="footer-link" target="_blank" rel="noopener">Feedback</a>
+    {% else %}
+    <a href="https://github.com/cpaelzer/kuckuckwernersberg/issues/new?title=Feedback" class="footer-link" target="_blank" rel="noopener">Feedback</a>
+    {% endif %}
+  </div>
+</footer>
