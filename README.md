@@ -27,14 +27,11 @@ Einfach kleine Wissensbrocken, die den Weg ein wenig unterhaltsamer machen.
 
 Hierbei geht es um kleine Bewegungsübungen, die Jung und Alt durchführen können, um das Wandern ein wenig aufzulockern.
 
-## Kuckuck: "Schon gehört oder gar gefunden?”
+## Kuckuck: "Schon gefunden?”
 
 Ein Suchspiel in der Umgebung der Station, hierzu erstellen wir für jede Station eine kleine Vogel-Silhouette die wir in der Nähe verstecken und suchen lassen.
-Es gibt stets einen Hinweis, wo man suchen sollte. Der Text dieses Hinweises beginnt stets gleich:
 
-  “Habt Ihr den Kuckuck Werner schon gehört?" "Nein, ja leider ist er selten geworden, aber suche doch mal …”
-
-gefolgt von einem Hinweis zum Ort an dieser Station.
+  “Wie schade, Kuckuck Werner ist leider nicht hier - wen entdeckst Du stattdessen?”
 
 Wir erstellen Silhouetten von 18 verschiedenen Vögeln die im Pfälzer Wald vorkommen, gesucht wird aber “Kuckuck Werner”
 

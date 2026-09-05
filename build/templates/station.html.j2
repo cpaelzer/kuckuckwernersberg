@@ -15,12 +15,11 @@
     <div class="section-content">{{ eichhoernchen_content|safe }}</div>
   </section>
 
-  {% if kuckuck_hint %}
   <section class="station-section kuckuck">
     <img src="{{ base_path }}assets/img/Kuckuck_small.png" alt="Kuckuck" class="section-icon">
-    <h3>Schon gehört oder gar gefunden?</h3>
+    <h3>Schon gefunden?</h3>
     <div class="section-content">
-      <p class="kuckuck-intro">{{ kuckuck_hint|safe }}</p>
+      <p class="kuckuck-intro">Wie schade, Kuckuck Werner ist leider nicht hier - wen entdeckst Du stattdessen?</p>
     </div>
 
     <div class="bird-game">
@@ -32,7 +31,6 @@
       {% endfor %}
     </div>
   </section>
-  {% endif %}
 </article>
 
 <div class="modal-overlay" id="bird-modal">

@@ -15,6 +15,3 @@ fuchs: 'Im Pfälzer Wald gibt es ein dichtes Netz an Rastmöglichkeiten für Wan
   Tafeln entdecken kannst!'
 eichhoernchen: Von hier aus führt der Pfad weiter auf einen breiten Weg, versuche ihn in möglichst wenig
   Schritten zu erreichen.
-kuckuck:
-  hint: “... entlang des Pfades zum Osterbrunnen”
-  placement: nahe am Pfad
