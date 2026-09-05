@@ -1,14 +1,11 @@
 # SPDX-FileCopyrightText: 2026 Kuckuck Werners Berg Project
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-.PHONY: all clean html convert run
+.PHONY: all clean html run
 
 all: html
 
-convert:
-	python3 build/convert_stations.py
-
-html: clean convert
+html: clean
 	python3 build/generate.py
 	mkdir -p html/assets/css html/assets/js html/assets/img/vogel
 	cp build/static/css/main.css html/assets/css/
