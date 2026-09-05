@@ -11,10 +11,6 @@ import glob as globmod
 from jinja2 import Environment, FileSystemLoader
 
 VOGEL_DIR = 'vogel'
-STATIC_KUCKUCK_INTRO = (
-    '"Habt Ihr den Kuckuck Werner schon gehört?" "Nein, ja leider ist er selten '
-    'geworden, aber suche doch mal …'
-)
 
 def load_station(station_id):
     """Load station YAML and return rendered content."""
@@ -51,16 +47,7 @@ def render_station(station_id, data, env, vmap, git_sha):
     fuchs_html = markdown.markdown(data['fuchs'])
     eich_html = markdown.markdown(data['eichhoernchen'])
 
-    has_kuckuck = 'kuckuck' in data
-    if has_kuckuck:
-        hint_raw = data['kuckuck']['hint']
-        hint_full = f'{STATIC_KUCKUCK_INTRO} {hint_raw}'
-        kuckuck_hint_html = markdown.markdown(hint_full)
-        birds, correct_prefix = get_bird_options(station_id, vmap)
-    else:
-        kuckuck_hint_html = None
-        birds = None
-        correct_prefix = None
+    birds, correct_prefix = get_bird_options(station_id, vmap)
 
     template = env.get_template('station.html.j2')
     html = template.render(
@@ -68,7 +55,6 @@ def render_station(station_id, data, env, vmap, git_sha):
         station_id=station_id,
         fuchs_content=fuchs_html,
         eichhoernchen_content=eich_html,
-        kuckuck_hint=kuckuck_hint_html,
         birds=birds,
         correct_prefix=correct_prefix,
         git_sha=git_sha,
