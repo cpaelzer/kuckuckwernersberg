@@ -31,7 +31,7 @@ def vogel_files_map():
 
 def get_bird_options(station_id, vmap):
     """Return 3 birds: correct + 2 fixed-offset distractors."""
-    offsets = [0, 6, 12]
+    offsets = [0, 5, 13]
     birds = []
     correct_prefix = None
     for off in offsets:
