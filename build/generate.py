@@ -59,6 +59,7 @@ def render_station(station_id, data, env, vmap, git_sha):
         correct_prefix=correct_prefix,
         git_sha=git_sha,
         base_path='../',
+        show_intro_link=True,
     )
     os.makedirs('html/station', exist_ok=True)
     out_path = f'html/station/{station_id:02}.html'
@@ -82,7 +83,7 @@ def render_index(env, git_sha):
         f.write(html)
     print(f'  Generated: html/index.html')
 
-    stationen_html = env.get_template('stationen.html.j2').render(title="Alle Stationen", git_sha=git_sha, base_path='')
+    stationen_html = env.get_template('stationen.html.j2').render(title="Alle Stationen", git_sha=git_sha, base_path='', show_intro_link=True)
     with open('html/stationen.html', 'w') as f:
         f.write(stationen_html)
     print(f'  Generated: html/stationen.html')

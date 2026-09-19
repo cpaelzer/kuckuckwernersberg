@@ -55,6 +55,11 @@ main {
   width: auto;
 }
 
+.header-home-link,
+.header-wappen-link {
+  display: inline-flex;
+}
+
 .header-titles {
   text-align: center;
   flex: 1;
@@ -353,6 +358,7 @@ main {
 
 .footer-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   max-width: 720px;

@@ -1,11 +1,9 @@
 <footer class="main-footer">
   <div class="footer-content">
     <a href="https://wernersberg.de/index.php?view=impressum" class="footer-link" target="_blank" rel="noopener noreferrer">Impressum</a>
-    <span class="footer-git">Commit: <code>{{ git_sha }}</code></span>
-    {% if station_id is defined %}
-    <a href="https://github.com/cpaelzer/kuckuckwernersberg/issues/new?title=Feedback%20Station%20{{ '%02d' % station_id }}" class="footer-link" target="_blank" rel="noopener">Feedback</a>
-    {% else %}
-    <a href="https://github.com/cpaelzer/kuckuckwernersberg/issues/new?title=Feedback" class="footer-link" target="_blank" rel="noopener">Feedback</a>
+    <a href="https://github.com/cpaelzer/kuckuckwernersberg" class="footer-link footer-git" target="_blank" rel="noopener noreferrer">Commit: <code>{{ git_sha }}</code></a>
+    {% if show_intro_link %}
+    <a href="{{ base_path }}index.html" class="footer-link">Was ist Kuckuck Werners Berg?</a>
     {% endif %}
   </div>
 </footer>
