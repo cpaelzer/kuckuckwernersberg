@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2026 Kuckuck Werners Berg Project
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-.PHONY: all clean html run sync analyze
+.PHONY: all clean html run sync analyze qrcodes
 
 all: html
 
@@ -24,7 +24,8 @@ html: clean
 
 clean:
 	rm -rf html
-	@echo "Cleaned: html/"
+	rm -f qrcodes/*.svg qrcodes/*.pdf
+	@echo "Cleaned: html/ and regenerable qrcodes/ artifacts"
 
 run: html
 	@{ trap 'kill 0' EXIT; \
@@ -56,3 +57,14 @@ sync: html
 
 analyze:
 	python3 metrics/analyze_metrics.py
+
+qrcodes:
+	@for n in $$(seq 0 18); do \
+	  num=$$(printf '%02d' $$n); \
+	  echo "Generating $$num ..."; \
+	  python3 qrcodes/create_qr_codes.py \
+	    --url "https://wernersberg.de/kwb/$$n" \
+	    --logo logos/Kombiniert_vector_color.svg \
+	    --output qrcodes/$$num.svg || exit 1; \
+	  done
+	@echo "QR codes generated in qrcodes/ (SVG artwork + CMYK print PDF)"

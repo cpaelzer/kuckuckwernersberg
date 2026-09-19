@@ -47,6 +47,8 @@ Wir bieten auf jeder Seite drei Vögelsilhouetten zum auswählen an, man erhält
 
 Die QR-Codes im Wald zeigen auf dauerhaft stabile, kurze URLs der Form `https://wernersberg.de/kwb/<Stationsnummer>` — `0` ist die Startseite, `1` bis `18` die Stationen. Eine Umleitung (`.htaccess` + `qr.php`) zählt die Nutzung anonym und leitet zur aktuellen Seitenstruktur weiter: Die Zielseiten lassen sich so jederzeit ändern, ohne dass gedruckte QR-Codes angepasst werden müssten.
 
+Die QR-Schilder werden mit `make qrcodes` erzeugt (`00.svg`–`18.svg`): Das SVG ist die Ansichts-Datei im Trim-Format 12x14cm, daneben entsteht je Station ein druckfertiges CMYK-PDF. Die QR-Codes nutzen Fehlerkorrektur Level H und eine Ruhezone von 3 Modulen (ISO 18004 nennt 4 als sichere Obergrenze; 3 Module entsprechen der gängigen Praxis auf Plakaten und Verpackungen und vergrößern Scan-Distanz und Modulgröße um ca. 5 %). Die PDFs folgen allgemeinen Druck-Vorgaben: CMYK, PDF 1.4, keine eingebetteten ICC-Profile, 3 mm Beschnitt mit Beschnittzeichen, Trim-/BleedBox, reine Vektoren, Schriften als Pfade konvertiert.).
+
 ## Datenschutz (QR-Umleitung / Nutzungszähler)
 
 Was NICHT von kuckuckwernersberg erfasst wird:
@@ -77,6 +79,11 @@ Benötigte Systempakete:
 
     sudo apt install -y make python3-jinja2 python3-markdown python3-yaml
 
+Zum Erzeugen der druckfertigen QR-Code-Schilder zusätzlich:
+
+    sudo apt install -y qrencode python3-fonttools python3-pikepdf fonts-roboto librsvg2-bin ghostscript
+    make qrcodes
+
 Zum Entwickeln mit Auto-Reload:
 
     sudo apt install -y inotify-tools
@@ -100,6 +107,7 @@ Zum Auswerten der anonymen QR-Nutzungszähler (werden bei `make sync` nach ./met
 * /station - Eine Datei je Station welche die Inhalte an dieser Station beschreibt
 * /vogel - Ein Vogel für jede der 18 Stationen im format `<nummer>_<name>`
 * /logos - Logos für die Sektionen in jeder Station für Eichhörnchen, Fuchs und Kuckuck. Sowie ein kombiniertes logo für den Weg in allgemeinen
+* /qrcodes - Skript `create_qr_codes.py`: erzeugt je Station das QR-Schild als SVG (Ansicht) und druckfertiges CMYK-PDF (Daten für die Druckerei)
 * /html - Verzeichnis zum export auf die Webseite, generiert aus den Daten im Repository
 * /metrics - Auswerteskript für die anonymen QR-Nutzungszähler (`make analyze`) und deren lokale Spiegelung; die Spiegelungsdaten sind nicht Teil des Repositories
 * /build - aller Code der, ausser dem Makefile, zur Erstellung der Seiten gebraucht wird

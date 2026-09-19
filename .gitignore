@@ -1,2 +1,4 @@
 html
 metrics/.ht-qr-redirect-metrics.log
+qrcodes/*.svg
+qrcodes/*.pdf
