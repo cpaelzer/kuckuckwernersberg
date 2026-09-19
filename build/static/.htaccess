@@ -1,0 +1,4 @@
+# SPDX-FileCopyrightText: 2026 Kuckuck Werners Berg Project
+# SPDX-License-Identifier: GPL-3.0-or-later
+RewriteEngine On
+RewriteRule ^([0-9]{1,2})/?$ qr.php?s=$1 [L]

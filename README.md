@@ -43,6 +43,27 @@ Hierzu können die Kinder einfach nur die Silouhetten erkennen aber auch die For
 
 Wir bieten auf jeder Seite drei Vögelsilhouetten zum auswählen an, man erhält eine Bestätigung wenn der korrekte identifiziert wurde.
 
+## QR-Codes und URLs
+
+Die QR-Codes im Wald zeigen auf dauerhaft stabile, kurze URLs der Form `https://wernersberg.de/kwb/<Stationsnummer>` — `0` ist die Startseite, `1` bis `18` die Stationen. Eine Umleitung (`.htaccess` + `qr.php`) zählt die Nutzung anonym und leitet zur aktuellen Seitenstruktur weiter: Die Zielseiten lassen sich so jederzeit ändern, ohne dass gedruckte QR-Codes angepasst werden müssten.
+
+## Datenschutz (QR-Umleitung / Nutzungszähler)
+
+Was NICHT von kuckuckwernersberg erfasst wird:
+
+* IP-Adresse
+* Cookies / LocalStorage / Supercookies (es wird nichts auf dem Gerät gespeichert — deshalb auch kein Cookie-Banner)
+* User-Agent / Geräte- oder Browserkennung
+* Referrer (woher der Besuch kam)
+* Standort / GPS
+* Device-Fingerprinting (Bildschirm, Schriftarten, Canvas …)
+* Tracking-IDs, Session-Kennungen, Zählpixel
+* Spracheinstellungen (Accept-Language)
+* Zeitangaben genauer als die Stunde
+* Drittbieter: keine externen Fonts, CDNs oder Analyse-Dienste — alle Ressourcen kommen von wernersberg.de
+
+Erfasst wird ausschließlich: Datum + Stunde + Stationsnummer, je QR-Umleitung.
+
 ## Technik
 
 * Texte sollen gewissen Einschränkungen unterliegen, damit sie Unterhaltsam bleiben und schnell erfasst werden können
@@ -69,6 +90,10 @@ Zum Veröffentlichen auf dem Webserver:
 Für `make sync` muss ein rclone-Remote `kwb` eingerichtet sein (`rclone config`).
 Die Zugangsdaten liegen bewusst nicht in diesem Repository.
 
+Zum Auswerten der anonymen QR-Nutzungszähler (werden bei `make sync` nach ./metrics/ gespiegelt):
+
+    make analyze
+
 ## Struktur
 
 * README.md - diese Datei
@@ -76,6 +101,7 @@ Die Zugangsdaten liegen bewusst nicht in diesem Repository.
 * /vogel - Ein Vogel für jede der 18 Stationen im format `<nummer>_<name>`
 * /logos - Logos für die Sektionen in jeder Station für Eichhörnchen, Fuchs und Kuckuck. Sowie ein kombiniertes logo für den Weg in allgemeinen
 * /html - Verzeichnis zum export auf die Webseite, generiert aus den Daten im Repository
+* /metrics - Auswerteskript für die anonymen QR-Nutzungszähler (`make analyze`) und deren lokale Spiegelung; die Spiegelungsdaten sind nicht Teil des Repositories
 * /build - aller Code der, ausser dem Makefile, zur Erstellung der Seiten gebraucht wird
 * /misc - Restliche Dateien von der Erstellung als Archive falls nochmals gebraucht
 

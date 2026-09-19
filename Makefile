@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2026 Kuckuck Werners Berg Project
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-.PHONY: all clean html run sync
+.PHONY: all clean html run sync analyze
 
 all: html
 
@@ -14,12 +14,16 @@ html: clean
 	cp logos/Eichhoernchen_small.png html/assets/img/
 	cp logos/Kuckuck_small.png html/assets/img/
 	cp logos/Kombiniert_small.png html/assets/img/
+	cp build/static/.htaccess html/.htaccess
+	cp build/static/qr.php html/qr.php
+	mkdir -p html/metrics
+	cp build/static/metrics/.htaccess html/metrics/.htaccess
 	vogel_file=$$(ls vogel/ 2>/dev/null | head -1); \
 	if [ -n "$$vogel_file" ]; then cp vogel/*.png html/assets/img/vogel/; fi
 	@echo "Build complete: html/"
 
 clean:
-	rm -rf html/*
+	rm -rf html
 	@echo "Cleaned: html/"
 
 run: html
@@ -45,4 +49,10 @@ run: html
 sync: html
 	@command -v rclone >/dev/null 2>&1 || { echo "Error: rclone is not installed. See https://rclone.org/install/"; exit 1; }
 	@rclone listremotes | grep -q '^kwb:$$' || { echo "Error: rclone remote 'kwb:' is not configured. See 'rclone config'."; exit 1; }
-	rclone sync ./html/ kwb: --progress
+	rclone sync ./html/ kwb: --progress --exclude "/metrics/.ht-qr-redirect-metrics.log"
+	mkdir -p metrics
+	rclone copyto kwb:metrics/.ht-qr-redirect-metrics.log metrics/.ht-qr-redirect-metrics.log || echo "Note: no metrics data on the server yet (first deployment?)"
+	@echo "Sync complete."
+
+analyze:
+	python3 metrics/analyze_metrics.py
