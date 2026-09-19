@@ -61,6 +61,14 @@ Zum Entwickeln mit Auto-Reload:
     sudo apt install -y inotify-tools
     make run
 
+Zum Veröffentlichen auf dem Webserver:
+
+    sudo apt install -y rclone
+    make sync
+
+Für `make sync` muss ein rclone-Remote `kwb` eingerichtet sein (`rclone config`).
+Die Zugangsdaten liegen bewusst nicht in diesem Repository.
+
 ## Struktur
 
 * README.md - diese Datei

@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2026 Kuckuck Werners Berg Project
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-.PHONY: all clean html run
+.PHONY: all clean html run sync
 
 all: html
 
@@ -41,3 +41,8 @@ run: html
 	   python3 -m http.server 8080 --directory html; \
 	   kill $$WATCHER_PID 2>/dev/null; \
 	 }
+
+sync: html
+	@command -v rclone >/dev/null 2>&1 || { echo "Error: rclone is not installed. See https://rclone.org/install/"; exit 1; }
+	@rclone listremotes | grep -q '^kwb:$$' || { echo "Error: rclone remote 'kwb:' is not configured. See 'rclone config'."; exit 1; }
+	rclone sync ./html/ kwb: --progress
